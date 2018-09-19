@@ -1,0 +1,454 @@
+// Copyright 2018 Silicon Laboratories, Inc.
+//
+//
+
+// Modem configuration parameters
+// version: 1.3.0.117
+// afc_en: 0
+// ant_div: 0
+// BER_mode: 0
+// Ch_Fil_Bw_AFC: 0
+// Chip_Version: 2
+// crystal_tol: 20
+// dsa_mode: 0
+// dsource: 0
+// ETSI: 0
+// fc: 433000000
+// Fdev: 20000
+// Fdev_error: 0
+// fhch: 10
+// fhst: 250000
+// freq_xo: 30000000
+// hi_pfm_div_mode: 0
+// High_perf_Ch_Fil: 1
+// if_mode: 2
+// inputBW: 0
+// Manchester: 0
+// Max_Rb_Error: 0
+// modulation_type: 2
+// OSRtune: 0
+// pm_len: 16
+// pm_pattern: 0
+// raw_demod: 0
+// Rsymb: 10000
+// RXBW: 150000
+// TC: 29
+
+// Modem configuration calculated values
+// if_freq: -468750.0
+// nb_filter: 4
+// nb_filter_bw: 82.6375
+// wb_filter: 4
+// wb_filter_bw: 82.6375
+
+// This file contains the generated ObjectAPI byte arrays for the given configuration
+// Enclosing macro to prevent multiple inclusion
+#ifndef __SLAB_RADIO_CONFIG__
+#define __SLAB_RADIO_CONFIG__
+
+
+#define RADIO_CONFIG_POWER_UP { \
+  0x02 /* CMD: Power up                                               */,\
+  0x01 /* BOOT_OPTIONS,PATCH[7],FUNC[5:0]                             */,\
+  0x00 /* XTAL_OPTIONS,TCXO[0]                                        */,\
+  0x01 /* XO_FREQ,XO_FREQ[7:0],XO_FREQ[7:0],XO_FREQ[7:0],XO_FREQ[7:0] */,\
+  0xC9 /*                                                             */,\
+  0xC3 /*                                                             */,\
+  0x80 /*                                                             */\
+}
+
+#define RADIO_CONFIG_POWER_UP_LEN (7)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_ENABLE { \
+  0x11 /* CMD: Set property                                                               */,\
+  0x01 /* GROUP: Int ctl                                                                  */,\
+  0x01 /* NUM_PROPS                                                                       */,\
+  0x00 /* START_PROP                                                                      */,\
+  0x05 /* INT_CTL_ENABLE,CHIP_INT_STATUS_EN[2],MODEM_INT_STATUS_EN[1],PH_INT_STATUS_EN[0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_ENABLE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_PH_ENABLE { \
+  0x11 /* CMD: Set property                                                                                                                                                                 */,\
+  0x01 /* GROUP: Int ctl                                                                                                                                                                    */,\
+  0x01 /* NUM_PROPS                                                                                                                                                                         */,\
+  0x01 /* START_PROP                                                                                                                                                                        */,\
+  0x38 /* INT_CTL_PH_ENABLE,FILTER_MATCH_EN[7],FILTER_MISS_EN[6],PACKET_SENT_EN[5],PACKET_RX_EN[4],CRC_ERROR_EN[3],ALT_CRC_ERROR_EN[2],TX_FIFO_ALMOST_EMPTY_EN[1],RX_FIFO_ALMOST_FULL_EN[0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_PH_ENABLE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_MODEM_ENABLE { \
+  0x11 /* CMD: Set property                                                                                                                                                         */,\
+  0x01 /* GROUP: Int ctl                                                                                                                                                            */,\
+  0x01 /* NUM_PROPS                                                                                                                                                                 */,\
+  0x02 /* START_PROP                                                                                                                                                                */,\
+  0x00 /* INT_CTL_MODEM_ENABLE,RSSI_LATCH_EN[7],POSTAMBLE_DETECT_EN[6],INVALID_SYNC_EN[5],RSSI_JUMP_EN[4],RSSI_EN[3],INVALID_PREAMBLE_EN[2],PREAMBLE_DETECT_EN[1],SYNC_DETECT_EN[0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_MODEM_ENABLE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_CHIP_ENABLE { \
+  0x11 /* CMD: Set property                                                                                                                              */,\
+  0x01 /* GROUP: Int ctl                                                                                                                                 */,\
+  0x01 /* NUM_PROPS                                                                                                                                      */,\
+  0x03 /* START_PROP                                                                                                                                     */,\
+  0x20 /* INT_CTL_CHIP_ENABLE,CAL_EN[6],FIFO_UNDERFLOW_OVERFLOW_ERROR_EN[5],STATE_CHANGE_EN[4],CMD_ERROR_EN[3],CHIP_READY_EN[2],LOW_BATT_EN[1],WUT_EN[0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_INT_CTL_CHIP_ENABLE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_A_MODE { \
+  0x11 /* CMD: Set property              */,\
+  0x02 /* GROUP: Frr ctl                 */,\
+  0x01 /* NUM_PROPS                      */,\
+  0x00 /* START_PROP                     */,\
+  0x01 /* FRR_CTL_A_MODE,FRR_A_MODE[7:0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_A_MODE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_B_MODE { \
+  0x11 /* CMD: Set property              */,\
+  0x02 /* GROUP: Frr ctl                 */,\
+  0x01 /* NUM_PROPS                      */,\
+  0x01 /* START_PROP                     */,\
+  0x02 /* FRR_CTL_B_MODE,FRR_B_MODE[7:0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_B_MODE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_C_MODE { \
+  0x11 /* CMD: Set property              */,\
+  0x02 /* GROUP: Frr ctl                 */,\
+  0x01 /* NUM_PROPS                      */,\
+  0x02 /* START_PROP                     */,\
+  0x09 /* FRR_CTL_C_MODE,FRR_C_MODE[7:0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_C_MODE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_D_MODE { \
+  0x11 /* CMD: Set property              */,\
+  0x02 /* GROUP: Frr ctl                 */,\
+  0x01 /* NUM_PROPS                      */,\
+  0x03 /* START_PROP                     */,\
+  0x00 /* FRR_CTL_D_MODE,FRR_D_MODE[7:0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_FRR_CTL_D_MODE_LEN (5)
+
+
+#define RADIO_CONFIG_SET_PROPERTY_EZCONFIG_XO_TUNE { \
+  0x11 /* CMD: Set property                */,\
+  0x24 /* GROUP: Ezconfig                  */,\
+  0x01 /* NUM_PROPS                        */,\
+  0x03 /* START_PROP                       */,\
+  0x45 /* EZCONFIG_XO_TUNE,TUNE_VALUE[6:0] */\
+}
+
+#define RADIO_CONFIG_SET_PROPERTY_EZCONFIG_XO_TUNE_LEN (5)
+
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_0 { \
+  0x66 /* CMD: Ezconfig array write */,\
+  0x28 /* DATA0                     */,\
+  0xF4 /* DATA1                     */,\
+  0xBE /* DATA3                     */,\
+  0x29 /* DATA4                     */,\
+  0xFD /* DATA5                     */,\
+  0xD2 /* DATA6                     */,\
+  0xEE /* DATA7                     */,\
+  0xEB /* DATA8                     */,\
+  0xE0 /* DATA9                     */,\
+  0x38 /* DATA10                    */,\
+  0xF0 /* DATA11                    */,\
+  0xA4 /* DATA12                    */,\
+  0x2D /* DATA13                    */,\
+  0x83 /* DATA14                    */,\
+  0x3F /* DATA15                    */,\
+  0x25 /* DATA16                    */,\
+  0xA1 /* DATA17                    */,\
+  0x12 /* DATA18                    */,\
+  0x8A /* DATA19                    */,\
+  0x68 /* DATA20                    */,\
+  0x14 /* DATA21                    */,\
+  0x19 /* DATA22                    */,\
+  0x0A /* DATA23                    */,\
+  0x09 /* DATA24                    */,\
+  0xCB /* DATA25                    */,\
+  0x02 /* DATA26                    */,\
+  0x9C /* DATA27                    */,\
+  0x56 /* DATA28                    */,\
+  0x47 /* DATA29                    */,\
+  0xF1 /* DATA30                    */,\
+  0x94 /* DATA31                    */,\
+  0x72 /* DATA32                    */,\
+  0xA8 /* DATA33                    */,\
+  0xDB /* DATA34                    */,\
+  0xFE /* DATA35                    */,\
+  0x7D /* DATA36                    */,\
+  0x57 /* DATA37                    */,\
+  0xD8 /* DATA38                    */,\
+  0xC9 /* DATA39                    */,\
+  0x03 /* DATA40                    */,\
+  0x49 /* DATA41                    */,\
+  0xC6 /* DATA42                    */,\
+  0x02 /* DATA43                    */,\
+  0x58 /* DATA44                    */,\
+  0xA1 /* DATA45                    */,\
+  0xDC /* DATA46                    */,\
+  0x97 /* DATA47                    */,\
+  0x18 /* DATA48                    */,\
+  0xF9 /* DATA49                    */,\
+  0x41 /* DATA50                    */,\
+  0x3C /* DATA51                    */,\
+  0x8D /* DATA52                    */,\
+  0xC5 /* DATA53                    */,\
+  0x74 /* DATA54                    */,\
+  0x87 /* DATA55                    */,\
+  0xD6 /* DATA56                    */,\
+  0xB6 /* DATA57                    */,\
+  0x5E /* DATA58                    */,\
+  0x52 /* DATA59                    */,\
+  0x60 /* DATA60                    */,\
+  0x52 /* DATA61                    */,\
+  0xE8 /* DATA62                    */,\
+  0xA0 /* DATA63                    */,\
+  0x44 /* DATA64                    */,\
+  0x9E /* DATA65                    */,\
+  0xB4 /* DATA66                    */,\
+  0x39 /* DATA67                    */,\
+  0x7B /* DATA68                    */,\
+  0x8B /* DATA69                    */,\
+  0x2C /* DATA70                    */,\
+  0xD8 /* DATA71                    */,\
+  0x9D /* DATA72                    */,\
+  0x37 /* DATA73                    */,\
+  0xF1 /* DATA74                    */,\
+  0x3B /* DATA75                    */,\
+  0x50 /* DATA76                    */,\
+  0x77 /* DATA77                    */,\
+  0x8F /* DATA78                    */,\
+  0x3C /* DATA79                    */,\
+  0xF4 /* DATA80                    */,\
+  0xB1 /* DATA81                    */,\
+  0x9F /* DATA82                    */,\
+  0xC3 /* DATA83                    */,\
+  0x6D /* DATA84                    */,\
+  0x59 /* DATA85                    */,\
+  0xE0 /* DATA86                    */,\
+  0xBA /* DATA87                    */,\
+  0x7E /* DATA88                    */,\
+  0x7B /* DATA89                    */,\
+  0x34 /* DATA90                    */,\
+  0x28 /* DATA91                    */,\
+  0x90 /* DATA92                    */,\
+  0x87 /* DATA93                    */,\
+  0xD9 /* DATA94                    */,\
+  0x0E /* DATA95                    */,\
+  0x57 /* DATA96                    */,\
+  0x6D /* DATA97                    */,\
+  0x38 /* DATA98                    */,\
+  0xB1 /* DATA99                    */,\
+  0xF9 /* DATA100                   */,\
+  0x93 /* DATA101                   */,\
+  0x53 /* DATA102                   */,\
+  0xAA /* DATA103                   */,\
+  0x8F /* DATA104                   */,\
+  0x21 /* DATA105                   */,\
+  0x1A /* DATA106                   */\
+}
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_0_LEN (107)
+
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_NOP_0 { \
+  0x00 /* CMD: Nop */\
+}
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_NOP_0_LEN (1)
+
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_1 { \
+  0x66 /* CMD: Ezconfig array write */,\
+  0xC0 /* DATA0                     */,\
+  0x7B /* DATA1                     */,\
+  0xEE /* DATA3                     */,\
+  0xF4 /* DATA4                     */,\
+  0x9E /* DATA5                     */,\
+  0x7A /* DATA6                     */,\
+  0x41 /* DATA7                     */,\
+  0x9B /* DATA8                     */,\
+  0xBD /* DATA9                     */,\
+  0xDD /* DATA10                    */,\
+  0xD0 /* DATA11                    */,\
+  0x4C /* DATA12                    */,\
+  0xB4 /* DATA13                    */,\
+  0x9E /* DATA14                    */,\
+  0x0A /* DATA15                    */,\
+  0x43 /* DATA16                    */,\
+  0x90 /* DATA17                    */,\
+  0xB6 /* DATA18                    */,\
+  0x5D /* DATA19                    */,\
+  0x79 /* DATA20                    */,\
+  0xC0 /* DATA21                    */,\
+  0x4F /* DATA22                    */,\
+  0x46 /* DATA23                    */,\
+  0x6B /* DATA24                    */,\
+  0xCA /* DATA25                    */,\
+  0x8B /* DATA26                    */,\
+  0x74 /* DATA27                    */,\
+  0xE0 /* DATA28                    */,\
+  0x5B /* DATA29                    */,\
+  0xDC /* DATA30                    */,\
+  0xCF /* DATA31                    */,\
+  0x54 /* DATA32                    */,\
+  0x1A /* DATA33                    */,\
+  0x29 /* DATA34                    */,\
+  0x74 /* DATA35                    */,\
+  0xD1 /* DATA36                    */,\
+  0xE0 /* DATA37                    */,\
+  0xB4 /* DATA38                    */,\
+  0xCF /* DATA39                    */,\
+  0x51 /* DATA40                    */,\
+  0x23 /* DATA41                    */,\
+  0x63 /* DATA42                    */,\
+  0x40 /* DATA43                    */,\
+  0x8A /* DATA44                    */,\
+  0x9F /* DATA45                    */,\
+  0xCA /* DATA46                    */,\
+  0xE8 /* DATA47                    */,\
+  0x3E /* DATA48                    */,\
+  0xDD /* DATA49                    */,\
+  0xED /* DATA50                    */,\
+  0x54 /* DATA51                    */,\
+  0x94 /* DATA52                    */,\
+  0xAB /* DATA53                    */,\
+  0x21 /* DATA54                    */,\
+  0xFB /* DATA55                    */,\
+  0xE7 /* DATA56                    */,\
+  0xCC /* DATA57                    */,\
+  0xF7 /* DATA58                    */,\
+  0x67 /* DATA59                    */,\
+  0xFB /* DATA60                    */,\
+  0x6A /* DATA61                    */,\
+  0x36 /* DATA62                    */,\
+  0x35 /* DATA63                    */,\
+  0x2D /* DATA64                    */,\
+  0x78 /* DATA65                    */,\
+  0xA4 /* DATA66                    */,\
+  0x33 /* DATA67                    */,\
+  0x76 /* DATA68                    */,\
+  0xBC /* DATA69                    */,\
+  0x16 /* DATA70                    */,\
+  0x0E /* DATA71                    */,\
+  0x51 /* DATA72                    */,\
+  0xE0 /* DATA73                    */,\
+  0x06 /* DATA74                    */,\
+  0xA0 /* DATA75                    */,\
+  0xD0 /* DATA76                    */,\
+  0x08 /* DATA77                    */,\
+  0x7A /* DATA78                    */,\
+  0xDE /* DATA79                    */,\
+  0xD5 /* DATA80                    */,\
+  0x11 /* DATA81                    */,\
+  0x3D /* DATA82                    */,\
+  0x10 /* DATA83                    */,\
+  0xEF /* DATA84                    */,\
+  0x20 /* DATA85                    */,\
+  0x08 /* DATA86                    */,\
+  0x02 /* DATA87                    */,\
+  0x37 /* DATA88                    */,\
+  0x9C /* DATA89                    */,\
+  0x5C /* DATA90                    */,\
+  0x77 /* DATA91                    */,\
+  0xFD /* DATA92                    */,\
+  0x17 /* DATA93                    */,\
+  0xD3 /* DATA94                    */,\
+  0x60 /* DATA95                    */,\
+  0xA7 /* DATA96                    */,\
+  0xB9 /* DATA97                    */,\
+  0xF5 /* DATA98                    */,\
+  0x7E /* DATA99                    */,\
+  0x6D /* DATA100                   */,\
+  0x8D /* DATA101                   */,\
+  0xE4 /* DATA102                   */,\
+  0xED /* DATA103                   */,\
+  0x35 /* DATA104                   */,\
+  0xBB /* DATA105                   */,\
+  0x87 /* DATA106                   */\
+}
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_1_LEN (107)
+
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_NOP_1 { \
+  0x00 /* CMD: Nop */\
+}
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_NOP_1_LEN (1)
+
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_2 { \
+  0x66 /* CMD: Ezconfig array write */,\
+  0x72 /* DATA0                     */,\
+  0x38 /* DATA1                     */,\
+  0x76 /* DATA3                     */,\
+  0x16 /* DATA4                     */,\
+  0xB0 /* DATA5                     */,\
+  0xD5 /* DATA6                     */,\
+  0x76 /* DATA7                     */,\
+  0x2A /* DATA8                     */,\
+  0x3B /* DATA9                     */,\
+  0x90 /* DATA10                    */,\
+  0xEC /* DATA11                    */,\
+  0xB5 /* DATA12                    */\
+}
+
+#define RADIO_CONFIG_EZCONFIG_ARRAY_WRITE_2_LEN (13)
+
+
+#define RADIO_CONFIG_EZCONFIG_CHECK { \
+  0x19 /* CMD: Ezconfig check                  */,\
+  0xBE /* CHECKSUM,CHECKSUM[7:0],CHECKSUM[7:0] */,\
+  0x5D /*                                      */\
+}
+
+#define RADIO_CONFIG_EZCONFIG_CHECK_LEN (3)
+
+
+#define RADIO_CONFIG_GPIO_PIN_CFG { \
+  0x13 /* CMD: Gpio pin cfg                */,\
+  0x1D /* GPIO0,PULL_CTL[6],GPIO_MODE[5:0] */,\
+  0x1D /* GPIO1,PULL_CTL[6],GPIO_MODE[5:0] */,\
+  0x20 /* GPIO2,PULL_CTL[6],GPIO_MODE[5:0] */,\
+  0x21 /* GPIO3,PULL_CTL[6],GPIO_MODE[5:0] */,\
+  0x00 /* NIRQ,PULL_CTL[6],NIRQ_MODE[5:0]  */,\
+  0x00 /* SDO,PULL_CTL[6],SDO_MODE[5:0]    */,\
+  0x00 /* GEN_CONFIG,DRV_STRENGTH[6:5]     */\
+}
+
+#define RADIO_CONFIG_GPIO_PIN_CFG_LEN (8)
+
+
+#define RADIO_CONFIG_COUNT (17)
+
+
+#endif // __SLAB_RADIO_CONFIG__
+
+
+//        _  _                          
+//       | )/ )         Wireless        
+//    \\ |//,' __       Application     
+//    (")(_)-"()))=-    Software        
+//       (\\            Platform        
